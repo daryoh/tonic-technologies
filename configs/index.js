@@ -1,12 +1,5 @@
-const redis = require('./redis')
-const email = require('./email')
-const aws = require('./aws')
+const redis = require("./redis");
 
-
-
-module.exports = { 
-    ...redis,
-    ...email,
-    ...aws,
-    port: process.env.PORT || 3000,
- }
+module.exports = {
+  ...redis,
+};
