@@ -1,8 +1,8 @@
 # tonic-technologies
 
-Shopping Cart System
+##Shopping Cart System
 
-Tech Stack
+##Tech Stack
 Node.js
 MongoDB
 Redis
