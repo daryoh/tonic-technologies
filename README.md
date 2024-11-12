@@ -3,9 +3,9 @@
 ##Shopping Cart System
 
 ##Tech Stack
-Node.js
-MongoDB
-Redis
+Node.js  
+MongoDB  
+Redis  
 
 Installation
 Clone the repository: git clone https://github.com/daryoh/tonic-technologies.git
