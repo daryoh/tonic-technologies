@@ -1,10 +1,10 @@
-const {Product} = require('../models');
+const Product = require("../models/Product");
 
-const productSeeds = [
+const seedProducts = [
   {
     name: "Gaming Laptop",
     description: "High-performance gaming laptop with RTX 3080",
-    category: "Electronics",
+    category: "Electronics", 
     price: 1999.99,
     stockQuantity: 10
   },
@@ -16,7 +16,7 @@ const productSeeds = [
     stockQuantity: 25
   },
   {
-    name: "Smart Watch",
+    name: "Smart Watch", 
     description: "Fitness tracking smartwatch with heart rate monitor",
     category: "Wearables",
     price: 199.99,
@@ -31,22 +31,23 @@ const productSeeds = [
   },
   {
     name: "Mechanical Keyboard",
-    description: "RGB mechanical gaming keyboard",
+    description: "RGB mechanical gaming keyboard", 
     category: "Peripherals",
     price: 149.99,
     stockQuantity: 20
   }
 ];
 
-const seedProducts = async () => {
-    try {
-      await Product.insertMany(productSeeds);
-      console.log('Products seeded successfully');
-      process.exit();
-    } catch (error) {
-      console.error('Error seeding products:', error);
-      process.exit(1);
+const seedDatabase = async () => {
+  try {
+    const products = await Product.find({});
+    if (products.length === 0) {
+      await Product.insertMany(seedProducts);
+      console.log("Database seeded successfully");
     }
-  };
-  
-  seedProducts();
+  } catch (error) {
+    console.error("Error seeding database:", error);
+  }
+};
+
+module.exports = { seedDatabase };
