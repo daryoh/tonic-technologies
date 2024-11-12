@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const {seedDatabase} = require("../models/productSeeder");
 const start = async (app) => {
   const port = process.env.PORT || 8000;
   try {
@@ -11,6 +11,9 @@ const start = async (app) => {
       }
     );
     console.log("Connected to MongoDB");
+
+    await seedDatabase();
+    
 
     app.listen(port, () => {
       console.log(`Tonic Tech Server started on port ${port}`);
