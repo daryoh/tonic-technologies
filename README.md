@@ -12,7 +12,7 @@ Clone the repository: git clone https://github.com/daryoh/tonic-technologies.git
 Navigate to the project directory: cd tonic-technologies  
 Install dependencies: npm install  
 Start the server: npm start  
-Start the Redis server: redis-server
+Start the Redis server: redis-server  
 Product Data Seeded on MongoDB Connect
 
 Usage  
